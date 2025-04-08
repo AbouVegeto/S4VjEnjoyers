@@ -8,16 +8,30 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom right, #dbeeff, #f0eaff);
+            margin: 0;
+            padding: 0;
+            background-image: url('background3.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .content-wrapper {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 40px 20px;
+            margin: 50px auto;
+            border-radius: 15px;
+            max-width: 800px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.15);
             text-align: center;
-            padding: 50px;
-            min-height: 100vh;
         }
 
         h1 {
             color: #333;
             margin-bottom: 40px;
             text-decoration: underline;
+            font-size: 2.5em;
         }
 
         .download-button {
@@ -52,13 +66,15 @@
 </head>
 <body>
 
-    <h1>Téléchargements</h1>
+    <div class="content-wrapper">
+        <h1>Téléchargements</h1>
 
-    <a href="projet.zip" class="download-button" download>Projet</a><br>
-    <a href="rapport.pdf" class="download-button" download>Rapport</a>
+        <a href="projet.zip" class="download-button" download>Projet</a><br>
+        <a href="rapport.pdf" class="download-button" download>Rapport</a>
 
-    <br>
-    <a href="index.html" class="back-link">← Retour à l'accueil</a>
+        <br>
+        <a href="index.html" class="back-link">← Retour à l'accueil</a>
+    </div>
 
 </body>
 </html>
