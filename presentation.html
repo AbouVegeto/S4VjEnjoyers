@@ -1,110 +1,179 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Présentation du groupe</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 20px;
-            background-color: #f5f5f5;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Présentation du groupe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('background3.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 50px;
+      text-align: center;
+      min-height: 100vh;
+    }
 
-        .container {
-            max-width: 600px;
-            margin: 50px auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-        }
+    .container {
+      background-color: rgba(173, 216, 230, 0.85);
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 900px;
+      margin: auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
 
-        h1 {
-            font-size: 2em;
-            color: #333;
-        }
+    h1 {
+      font-size: 2.5em;
+      color: #333;
+      margin-bottom: 30px;
+    }
 
-        p {
-            font-size: 1.2em;
-            color: #666;
-        }
+    p {
+      font-size: 1.2em;
+      color: #333;
+      margin-bottom: 40px;
+    }
 
-        ul {
-            list-style: none;
-            padding: 0;
-        }
+    .photos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
 
-        ul li {
-            font-size: 1.2em;
-            margin: 5px 0;
-        }
+    .photo-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+    }
 
-        .gallery {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-        }
+    .photos img {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease;
+    }
 
-        .gallery img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
+    .photos img:hover {
+      transform: scale(1.05);
+    }
 
-        .gallery img:hover {
-            transform: scale(1.1);
-        }
+    .photo-text {
+      margin-top: 10px;
+      font-size: 1.05em;
+      color: #222;
+      text-align: justify;
+      max-width: 300px;
+      display: none;
+    }
 
-        .button-container {
-            margin-top: 20px;
-        }
+    .photo-wrapper:hover .photo-text {
+      display: block;
+    }
 
-        .button {
-            background-color: #007BFF;
-            color: white;
-            padding: 10px 20px;
-            font-size: 1.2em;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            transition: background 0.3s;
-        }
+    .back-button {
+      display: inline-block;
+      margin-top: 50px;
+      padding: 12px 25px;
+      font-size: 1.1em;
+      background-color: #00bcd4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
 
-        .button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    .back-button:hover {
+      background-color: #0097a7;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+
+    .dropdown-menu select {
+      padding: 10px 15px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #00bcd4;
+      background-color: white;
+      color: #333;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      appearance: none;
+    }
+
+    .dropdown-menu select:hover {
+      background-color: #e0f7fa;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Présentation du groupe</h1>
-        <p>Voici le site internet de notre groupe de projet <strong>S4VjEnjoyers</strong>, composé des membres suivants :</p>
-        <ul>
-            <li>Timéo Berthault</li>
-            <li>Lucas Peres</li>
-            <li>Aboubakar Charf</li>
-        </ul>
-        <p>Le site comprendra de nombreuses améliorations au fur et à mesure que le semestre progresse.</p>
 
-        <h2>Les héros du groupe</h2>
-        <div class="gallery">
-            <img src="image3.jpg" alt="Timeo Berthault">
-            <img src="image4.jpg" alt="Lucas Peres">
-            <img src="image5.jpg" alt="Aboubakar Charf">
-        </div>
+  <div class="container">
+    <h1>Présentation du groupe</h1>
+    <p>
+      Voici le site internet de notre groupe de projet <strong>S4VjEnjoyers</strong>, composé des membres suivants :
+      Timéo Berthault, Lucas Peres et Abou. Passez votre curseur sur nos profils pour en savoir plus sur cette équipe de choc.
+    </p>
 
-        <div class="button-container">
-            <a href="index.html" class="button">Retour à l'accueil</a>
+    <div class="photos">
+      <!-- Timéo -->
+      <div class="photo-wrapper">
+        <img src="image4.jpg" alt="Timéo">
+        <div class="photo-text">
+          <strong>Timéo Berthault</strong><br>
+          Après une Terminale avec une spécialité en Mathématiques et une option en
+          Physique-chimie avec une orientation Mathématiques approfondies, j’ai choisi de
+          poursuivre mes études à l’EPITA. N’ayant pas choisi la spécialité NSI, je me
+          retrouve sans réel bagage informatique avant d’entrer à l’EPITA, et ce projet fut
+          donc ma deuxième expérience après celui de l’année dernière.
         </div>
+      </div>
+
+      <!-- Lucas -->
+      <div class="photo-wrapper">
+        <img src="image5.jpg" alt="Lucas">
+        <div class="photo-text">
+          <strong>Lucas Peres</strong><br>
+          Ayant toujours été attiré par l’informatique, j’ai rejoint EPITA en sortant du
+          lycée. Mon premier gros projet en équipe s’est déroulé l’année dernière. Ce projet
+          est pour moi l’occasion d’étoffer mes compétences et d’apprendre de nouvelles
+          choses mais également rattraper l’échec qu’a été personnellement le projet OCR.
+        </div>
+      </div>
+
+      <!-- Abou -->
+      <div class="photo-wrapper">
+        <img src="image3.jpg" alt="Abou">
+        <div class="photo-text">
+          <strong>Aboubakar Charf</strong><br>
+          J'ai expériencé les précédents projets avec foi et vaillance (à tel point que c’est mon deuxième projet S4 que je vais
+          réaliser ce semestre). On peut dire que j’ai toujours été attiré par l’informatique
+          à partir du lycée mais que cela n’a pas toujours été réciproque. Mais cela ne
+          m’empêche pas de toujours traiter mon rapport au travail avec passion et déter-
+          mination, car ma philosophie me l’interdit. J’ai donc hâte d’aboutir à un projet
+          final digne de ce que nous avions prévu avec mes camarades et amis du groupe
+          de projet S4VjEnjoyers.
+        </div>
+      </div>
     </div>
+
+    <a href="index.html" class="back-button">← Retour à l'accueil</a>
+  </div>
 
 </body>
 </html>

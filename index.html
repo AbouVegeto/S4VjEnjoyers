@@ -1,139 +1,174 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le site du groupe S4VjEnjoyers</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: url('background3.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Le site du groupe S4VjEnjoyers</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('background3.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
 
-        .content-wrapper {
-            background-color: rgba(255, 255, 255, 0.85);
-            padding: 40px 20px;
-            margin: 30px auto;
-            border-radius: 15px;
-            max-width: 1000px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.15);
-        }
+    .content-wrapper {
+      background-color: rgba(173, 216, 230, 0.85);
+      padding: 40px 20px;
+      margin: 30px auto;
+      border-radius: 15px;
+      max-width: 1000px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    }
 
-        h1 {
-            font-size: 2.5em;
-            color: #333;
-            margin-top: 20px;
-        }
+    h1 {
+      font-size: 2.5em;
+      color: #333;
+      margin-top: 20px;
+      text-align: center;
+    }
 
-        .image-container {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
+    .image-container {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
 
-        .image-container img {
-            width: 150px;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-        }
+    .image-container img {
+      width: 150px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    }
 
-        .button-container {
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
+    .project-description {
+      margin-top: 30px;
+      font-size: 1.1em;
+      color: #444;
+      line-height: 1.5;
+      text-align: center;
+    }
 
-        .button {
-            background-color: #007BFF;
-            color: white;
-            padding: 10px 20px;
-            font-size: 1.2em;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
+    .info-link {
+      margin-top: 30px;
+      font-size: 1.2em;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
 
-        .button:hover {
-            background-color: #0056b3;
-        }
+    .search-button {
+      font-size: 1.5em;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      background-color: #eeeeee;
+      transition: background 0.3s;
+    }
 
-        .cyan {
-            background-color: #00bcd4;
-        }
+    .search-button:hover {
+      background-color: #ccc;
+    }
 
-        .cyan:hover {
-            background-color: #0097a7;
-        }
+    /* 🎨 Carrousel stylé bleu clair */
+    .carousel {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      overflow-x: auto;
+      padding: 15px 0;
+      background-color: #e0f7fa;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
 
-        .project-description {
-            margin-top: 30px;
-            font-size: 1.1em;
-            color: #444;
-            line-height: 1.5;
-        }
+    .carousel-item {
+      min-width: 150px;
+      text-align: center;
+      padding: 10px 20px;
+      background-color: #00bcd4;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
 
-        .info-link {
-            margin-top: 30px;
-            font-size: 1.2em;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-        }
+    .carousel-item:hover {
+      background-color: #0097a7;
+    }
 
-        .search-button {
-            font-size: 1.5em;
-            text-decoration: none;
-            padding: 10px 15px;
-            border-radius: 8px;
-            background-color: #eeeeee;
-            transition: background 0.3s;
-        }
+    /* 🔽 Menu déroulant (sans Accueil) */
+    .dropdown-menu {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
 
-        .search-button:hover {
-            background-color: #ccc;
-        }
-    </style>
+    .dropdown-menu select {
+      padding: 10px 15px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #00bcd4;
+      background-color: white;
+      color: #333;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      appearance: none;
+    }
+
+    .dropdown-menu select:hover {
+      background-color: #e0f7fa;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="image-container">
-        <img src="image6.jpg" alt="Image principale">
+  <!-- 🔽 Menu déroulant sans accueil -->
+  <div class="dropdown-menu">
+    <select onchange="location.href=this.value">
+      <option disabled selected>Menu du site</option>
+      <option value="presentation.html">Présentation</option>
+      <option value="telechargements.html">Téléchargements</option>
+    </select>
+  </div>
+
+  <div class="image-container">
+    <img src="image6.jpg" alt="Image principale" />
+  </div>
+
+  <div class="content-wrapper">
+    <h1>Le site du groupe S4VjEnjoyers</h1>
+
+    <!-- 🌈 Carrousel stylé -->
+    <div class="carousel">
+      <a href="presentation.html" class="carousel-item">Présentation</a>
+      <a href="telechargements.html" class="carousel-item">Téléchargements</a>
     </div>
 
-    <div class="content-wrapper">
-        <h1>Le site du groupe S4VjEnjoyers</h1>
+    <p class="project-description">
+      Le projet réalisé par notre groupe est un logiciel de compression de fichiers.  
+      Cela consiste en la réduction du nombre de bits nécessaires à la représentation de données.  
+      Comme son nom l’indique, l’objectif du projet est de pouvoir compresser des fichiers de différents types  
+      (images et vidéos essentiellement mais également des dossiers, des fichiers textes…) en étant le plus efficace possible.
+      Le terme "efficace" varie selon le type du fichier mais pour une image ou une vidéo par exemple 
+      il s’agirait de maintenir au maximum la qualité d’image du média une fois traité.
+    </p>
 
-        <div class="button-container">
-            <a href="presentation.html" class="button">Présentation du groupe</a>
-            <a href="telechargements.html" class="button cyan">Téléchargements</a>
-        </div>
-
-        <p class="project-description">
-            Le projet réalisé par notre groupe est un logiciel de compression de fichiers.  
-            Cela consiste en la réduction du nombre de bits nécessaires à la représentation de données.  
-            Comme son nom l’indique, l’objectif du projet est de pouvoir compresser des fichiers de différents types  
-            (images et vidéos essentiellement mais également des dossiers, des fichiers textes…) en étant le plus efficace possible.
-	    Le terme "efficace" varie selon le type du fichier mais pour une image ou une vidéo par exemple 
-	    il s’agirait de maintenir au maximum la qualité d’image du média une fois traité.
-        </p>
-
-        <div class="info-link">
-            <span>Pour en savoir plus →</span>
-            <a href="https://fr.wikipedia.org/wiki/Compression_de_donn%C3%A9es" target="_blank" class="search-button">🔍</a>
-        </div>
+    <div class="info-link">
+      <span>Pour en savoir plus →</span>
+      <a href="https://fr.wikipedia.org/wiki/Compression_de_donn%C3%A9es" target="_blank" class="search-button">🔍</a>
     </div>
+  </div>
 
 </body>
 </html>

@@ -1,80 +1,80 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Téléchargements</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: url('background3.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Téléchargements</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('background3.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      text-align: center;
+      padding: 50px;
+      min-height: 100vh;
+      margin: 0;
+    }
 
-        .content-wrapper {
-            background-color: rgba(255, 255, 255, 0.85);
-            padding: 40px 20px;
-            margin: 50px auto;
-            border-radius: 15px;
-            max-width: 800px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.15);
-            text-align: center;
-        }
+    .container {
+      background-color: rgba(173, 216, 230, 0.85); /* BLEU CLAIR */
+      max-width: 800px;
+      margin: 100px auto;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
 
-        h1 {
-            color: #333;
-            margin-bottom: 40px;
-            text-decoration: underline;
-            font-size: 2.5em;
-        }
+    h1 {
+      color: #333;
+      margin-bottom: 40px;
+      text-decoration: underline;
+    }
 
-        .download-button {
-            background-color: #28a745;
-            color: white;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            border: none;
-            border-radius: 8px;
-            text-decoration: none;
-            display: inline-block;
-            margin: 20px 0;
-            transition: background 0.3s;
-        }
+    .download-button {
+      background-color: #28a745;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin: 20px 0;
+      transition: background 0.3s;
+    }
 
-        .download-button:hover {
-            background-color: #218838;
-        }
+    .download-button:hover {
+      background-color: #218838;
+    }
 
-        .back-link {
-            display: inline-block;
-            margin-top: 40px;
-            color: #007BFF;
-            text-decoration: none;
-            font-size: 1.1em;
-        }
+    .back-link {
+      display: inline-block;
+      margin-top: 40px;
+      color: #007BFF;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
 
-        .back-link:hover {
-            text-decoration: underline;
-        }
-    </style>
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="content-wrapper">
-        <h1>Téléchargements</h1>
+  <div class="container">
+    <h1>Téléchargements</h1>
 
-        <a href="projet.zip" class="download-button" download>Projet</a><br>
-        <a href="rapport.pdf" class="download-button" download>Rapport</a>
+    <a href="projet.zip" class="download-button" download>Projet</a><br>
+    <a href="rapport.pdf" class="download-button" download>Rapport</a>
 
-        <br>
-        <a href="index.html" class="back-link">← Retour à l'accueil</a>
-    </div>
+    <br>
+    <a href="index.html" class="back-link">← Retour à l'accueil</a>
+  </div>
 
 </body>
 </html>
