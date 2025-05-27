@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutoriel - S4VjEnjoyers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('background3.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 50px;
+      min-height: 100vh;
+    }
+
+    .container {
+      background-color: rgba(173, 216, 230, 0.85);
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 900px;
+      margin: auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #333;
+      margin-bottom: 30px;
+      text-decoration: underline;
+    }
+
+    p {
+      font-size: 1.1em;
+      color: #333;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+
+    .dropdown-menu select {
+      padding: 10px 15px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #00bcd4;
+      background-color: white;
+      color: #333;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      appearance: none;
+    }
+
+    .dropdown-menu select:hover {
+      background-color: #e0f7fa;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔽 Menu déroulant -->
+  <div class="dropdown-menu">
+    <select onchange="location.href=this.value">
+      <option disabled selected>Changer de page</option>
+      <option value="index.html">Accueil</option>
+      <option value="presentation.html">Présentation</option>
+      <option value="telechargements.html">Téléchargements</option>
+    </select>
+  </div>
+
+  <div class="container">
+    <h1>Tutoriel</h1>
+
+    <p>
+      Cette section sera dédiée à un tutoriel détaillé pour expliquer le fonctionnement du logiciel de compression
+      réalisé par notre groupe. Vous y trouverez prochainement des explications étape par étape, des démonstrations
+      en images, ainsi que des conseils d'utilisation.
+    </p>
+
+    <p>
+      Le contenu sera mis à jour au fur et à mesure de l’avancement du projet.
+      Restez à l’affût !
+    </p>
+  </div>
+
+</body>
+</html>
+
